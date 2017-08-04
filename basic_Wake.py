@@ -71,7 +71,7 @@ def Main():
     for n in range(len(paths)):
         crvs = []
         pts = []
-        amnt = 20
+        amnt = 10
         py=10
         for i in range(amnt):
             nParam = 1/amnt*i
@@ -80,8 +80,8 @@ def Main():
             tan = rs.CurveTangent(paths[n],param)
             srfParam = rs.SurfaceClosestPoint(srf,focal)
             axis = rs.SurfaceNormal(srf,srfParam)
-            r = 60*(nParam+1/amnt)
-            py = 3*(nParam+1/amnt) 
+            r = 40*(nParam+1/amnt)
+            py = 10*(nParam+1/amnt) 
             x = rs.VectorRotate(tan,90,axis)*(-r/2)
             xPt = rs.PointAdd(focal,x)
             for j in range(int(r)):
